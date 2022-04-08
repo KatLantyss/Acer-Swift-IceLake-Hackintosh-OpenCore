@@ -77,7 +77,7 @@ Now with all that, here are the tools we need
 - **Universal IFR Extractor** ([**Windows**](http://bios-mods.com/pub/donovan6000/Software/Universal%20IFR%20Extractor/Universal%20IFR%20Extractor.exe) | [**MacOS**](https://github.com/LongSoft/Universal-IFR-Extractor/releases/tag/0.3.7))
     - Utility to extract the internal forms representation from both EFI and UEFI drivers/applications into human readable text file.
 
-The details of the guildance please follow [**this**](https://zhuanlan.zhihu.com/p/266400995), which was written in Chinese, but there had some images to tell you how to do.
+> The details of the guildance please follow [**this**](https://zhuanlan.zhihu.com/p/266400995), which was written in Chinese, but there had some images to tell you how to do.
 
 ### **I. Dump BIOS Rom**
 - Run **Universal BIOS Backup ToolKit** as administrator and dump the BIOS rom.
