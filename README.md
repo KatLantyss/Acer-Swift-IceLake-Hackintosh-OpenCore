@@ -1,5 +1,9 @@
 # Acer Swift 3/5 IceLake Hackintosh (Opencore)
 
+## Support Version
+- Opencore: `0.7.x`
+- MacOS: `Big Sur 11.6.5（20G527)`
+
 ## Tested Model Spec
 
 > All Acer Swift 3/5 IceLake laptop can possibly use the same EFI file, but we suggest to test by yourself.
@@ -42,7 +46,6 @@
 - Airdrop <sup>**Not Supported in MacOS when using Intel Wireless Card**</sup>
 - FingerPrint <sup>**Not Supported in MacOS**</sup>
 - NVIDIA GeForce MX350 <sup>**Disable in ACPI**</sup>
-
 
 ---
 ---
