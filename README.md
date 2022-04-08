@@ -1,4 +1,4 @@
-# Acer Swift 3/5 IceLake Hackintosh (Opencore)
+# Acer Swift 3/5 IceLake Hackintosh (OpenCore)
 
 ## Support Version
 - OpenCore: `0.7.9`
