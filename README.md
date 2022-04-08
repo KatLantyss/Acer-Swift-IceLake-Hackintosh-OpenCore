@@ -10,7 +10,7 @@
     |-------------------|-----------------------------------|
     |Processor          |i7-1065G7                          |
     |Integrated Graphics|Intel Iris Plus Graphics           |
-    |Memory             |16GB^8Gx2^ Sk Hynix LPDDR4X 2667MHz|
+    |Memory             |16GB<sup>8Gx2</sup> Sk Hynix LPDDR4X 2667MHz|
     |Sound Card         |Conexant CX20671                   |
     |Wireless Card      |AX201                              |
 
