@@ -84,7 +84,7 @@ The details of the guildance please follow [**this**](https://zhuanlan.zhihu.com
     
     And then,
     
-    ```json
+    ```txt
     Var Store: 0x2[555] (SaSetup) {...}
     Var Store: 0x3[570] (CpuSetup) {...}
     ```
