@@ -36,7 +36,7 @@
 - Hardware acceleration
 - Sleep/Wake
 - Battery read-out
-- Audio (Internal microphone, 3.5mm headphone jack) <sup>**Internal speaker which is not working**</sup>
+- Audio (Internal microphone, 3.5mm headphone jack) <sup>**Internal speaker is not working**</sup>
 - Keyboard & trackpad/touchscreen with all macOS gestures
 - Wi-Fi & Bluetooth
 - USB ports
@@ -57,7 +57,7 @@
 
 ## BIOS
 
-> We accept no liability for any loss or damage howsoever changing BIOS with this guidance and cause damage on your device. Please be careful and Please be careful and make sure you know what you are doing.
+> We accept no liability for any loss or damage howsoever changing BIOS with this guidance and cause damage on your device. Please be careful and make sure you know what you are doing.
 
 
 - Due to some BIOS setting options are hidden by **Acer**, we can use several tools to help us matching [**Intel BIOS Settings | OpenCore Install Guide**](https://dortania.github.io/OpenCore-Install-Guide/config-laptop.plist/icelake.html#intel-bios-settings), here are the steps below.
