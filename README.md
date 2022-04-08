@@ -1,7 +1,7 @@
 # Acer Swift 3/5 IceLake Hackintosh (Opencore)
 
 ## Support Version
-- Opencore: `0.7.x`
+- OpenCore: `0.7.9`
 - MacOS: `Big Sur 11.6.5（20G527)`
 
 ## Tested Model Spec
