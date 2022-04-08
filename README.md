@@ -99,8 +99,8 @@ The details of the guildance please follow [**this**](https://zhuanlan.zhihu.com
 ### **IV. Change BIOS settings.**
 - According to the information in **Step III** to fix the value in BIOS by using **InsydeH2OUVE**.
 
-    > You need to run **WDFInst.exe** first and them open the **InsydeH2OUVE**.
-    > Change `Low Power S0 Idle Capability` to `Disable` in BIOS or you will get a sleep problem with it.<sup>MacOS only support `S3 Sleep State`</sup>
+    > - You need to run **WDFInst.exe** first and them open the **InsydeH2OUVE**.
+    > - Change `Low Power S0 Idle Capability` to `Disable` in BIOS or you will get a sleep problem with it.<sup>MacOS only support `S3 Sleep State`</sup>
 ---
 ---
 # Specific Patch
