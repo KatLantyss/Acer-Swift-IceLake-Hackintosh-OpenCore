@@ -1,9 +1,15 @@
 # Acer Swift 3/5 IceLake Hackintosh (Opencore)
 
+![GitHub top language](https://img.shields.io/github/languages/top/{username}/{repo-name}?color=yellow)
+![GitHub forks](https://img.shields.io/github/forks/{username}/{repo-name}?style=social)
+![GitHub Repo stars](https://img.shields.io/github/stars/{username}/{repo-name}?style=social)
+
 ## Tested Model
-:::warning
-All Acer Swift 3/5 laptop can possibly use the same EFI file, but we suggest to test by yourself.
-:::
+
+```diff
+@@ All Acer Swift 3/5 laptop can possibly use the same EFI file, but we suggest to test by yourself. @@
+```
+
 - ### **Acer Swift 5 SF514-54GT**
     |  Specifications   |              Detail               |
     |-------------------|-----------------------------------|
@@ -29,33 +35,34 @@ All Acer Swift 3/5 laptop can possibly use the same EFI file, but we suggest to 
 - [x] Hardware acceleration
 - [x] Sleep/Wake
 - [x] Battery read-out
-- [x] Audio (Internal microphone, 3.5mm headphone jack) <font color=red>**^Internal\ speaker\ is\ not\ working^**</font>
+- [x] Audio (Internal microphone, 3.5mm headphone jack) <sup>**Internal speaker is not working**</sup>
 - [x] Keyboard & trackpad/touchscreen with all macOS gestures
 - [x] Wi-Fi & Bluetooth
 - [x] USB ports
 - [ ] Airdrop
-- [ ] ThunderBolt 3 <font color=orange>**^Not\ test\ yet,\ but\ the\ Type-C\ port\ are\ fine.^**</font>
-***
+- [ ] ThunderBolt 3 <sup>**Not test yet, but the Type-C port are fine.**</sup>
+
+---
+---
 # Guidance
 ## Getting started with [OpenCore](https://dortania.github.io/OpenCore-Install-Guide/)
-:::warning
-Essentially follow the [**Laptop Icelake | OpenCore Install Guide**](https://dortania.github.io/OpenCore-Install-Guide/config-laptop.plist/icelake.html#starting-point) and incorporate the insights listed below.
-:::
+
+> Essentially follow the [**Laptop Icelake | OpenCore Install Guide**](https://dortania.github.io/OpenCore-Install-Guide/config-laptop.plist/icelake.html#starting-point) and incorporate the insights listed below.
+
 
 ## BIOS
-:::danger
-**Disclaimer**</font>
-We accept no liability for any loss or damage howsoever changing BIOS with this guidance and cause damage on your device. Please be careful and make sure you know what you are doing.
-:::
+
+```diff
+- We accept no liability for any loss or damage howsoever changing BIOS with this guidance and cause damage on your device. Please be careful and Please be careful and make sure you know what you are doing - 
+```
 
 - Due to some BIOS options are hidden in **InsydeH2O**, we can use several tools to help us matching [**Intel BIOS Settings | OpenCore Install Guide**](https://dortania.github.io/OpenCore-Install-Guide/config-laptop.plist/icelake.html#intel-bios-settings), here are the steps below.
 
-
-:::info
-<font size=4.5>**Info**</font>
+***
+**Info**
 
 Now with all that, here are the tools we need
-> <font color=orange>All tools are in [here](https://link.zhihu.com/?target=https%3A//pan.baidu.com/s/1wrPMd3yAIhplg8v0mZhzhQ).^(Password\ is\ 1234)^</font>
+> All tools are in [here](https://link.zhihu.com/?target=https%3A//pan.baidu.com/s/1wrPMd3yAIhplg8v0mZhzhQ).<sup>(Password is 1234)</sup>
 
 - [**Universal BIOS Backup ToolKit**](https://m.majorgeeks.com/mg/getmirror/universal_bios_backup_toolkit,1.html)
     - For Dumping BIOS rom
@@ -65,7 +72,7 @@ Now with all that, here are the tools we need
     - For extracting and modifying UEFI firmware images
 - **Universal IFR Extractor** ([**Windows**](http://bios-mods.com/pub/donovan6000/Software/Universal%20IFR%20Extractor/Universal%20IFR%20Extractor.exe) | [**MacOS**](https://github.com/LongSoft/Universal-IFR-Extractor/releases/tag/0.3.7))
     - Utility to extract the internal forms representation from both EFI and UEFI drivers/applications into human readable text file.
----
+
 The details of the guildance please follow [**this**](https://zhuanlan.zhihu.com/p/266400995), which was written in Chinese, but there had some images to tell you how to do.
 
 ### **I. Dump BIOS Rom**
@@ -83,7 +90,7 @@ The details of the guildance please follow [**this**](https://zhuanlan.zhihu.com
     
     And then,
     
-    ```
+    ```json
     Var Store: 0x2[555] (SaSetup) {...}
     Var Store: 0x3[570] (CpuSetup) {...}
     ```
@@ -95,18 +102,16 @@ The details of the guildance please follow [**this**](https://zhuanlan.zhihu.com
 - You need to run **WDFInst.exe** first and them open the **InsydeH2OUVE**.
 :::
 ---
+---
 # Specific Patch
 
 ## ACPI
 ### Add
-:::info
 - **SSDT-dGPU-Off**
     - More details in [**Disabling laptop dGPUs | Getting Started With ACPI**](https://dortania.github.io/Getting-Started-With-ACPI/Laptops/laptop-disable.html#disabling-laptop-dgpus-ssdt-dgpu-off-nohybgfx)
-:::
 
 ## Booter
 ### MmioWhitelist
-:::info
 - **MMIO IceLake**
     - This will cause early kernel panics on Acer IceLake Laptop.
 
@@ -114,31 +119,26 @@ The details of the guildance please follow [**this**](https://zhuanlan.zhihu.com
         |-------|-------|-----------------------|
         |Enabled|Boolean|True                   |
         |Address|Number |4284481536             |
-:::
 
 ## DeviceProperties
 ### Add
-:::info
 - **PciRoot(0x0)/Pci(0x2,0x0)**
    - [**Support all possible Core Display Clock (CDCLK) frequencies on ICL platforms**](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.IntelHD.en.md#support-all-possible-core-display-clock-cdclk-frequencies-on-icl-platforms)
    - [**Fix the issue that the builtin display remains garbled after the system boots on ICL platforms**](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.IntelHD.en.md#fix-the-issue-that-the-builtin-display-remains-garbled-after-the-system-boots-on-icl-platforms)
    - More details in [**Intel Iris Plus Graphics (Ice Lake processors) | WhateverGreen (Intel® HD Graphics FAQs)**](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.IntelHD.en.md#intel-iris-plus-graphics-ice-lake-processors)
-:::
 
 ## NVRAM
 ### Add
-:::info
 - 7C436110-AB2A-4BBB-A880-FE41995C9F82
     - boot-args
         - `-noDC9` 	
             - This will fix sleep problem
         - `-igfxdbeo` `-igfxcdc`
             - Ignore when you place in **DeviceProperties**
-:::
 
 ---
+---
 # Credits
-
 - [**Apple**](https://www.apple.com/tw/) for the macOS.
 - [**Acidanthera**](https://github.com/acidanthera) for awesome kexts and first-class support for hackintosh enthusiasts.
 - [**Dortania**](https://github.com/dortania) for the great guides.
