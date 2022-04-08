@@ -1,14 +1,9 @@
 # Acer Swift 3/5 IceLake Hackintosh (Opencore)
 
-![GitHub top language](https://img.shields.io/github/languages/top/{username}/{repo-name}?color=yellow)
-![GitHub forks](https://img.shields.io/github/forks/{username}/{repo-name}?style=social)
-![GitHub Repo stars](https://img.shields.io/github/stars/{username}/{repo-name}?style=social)
-
 ## Tested Model
 
-```diff
-@@ All Acer Swift 3/5 laptop can possibly use the same EFI file, but we suggest to test by yourself. @@
-```
+> All Acer Swift 3/5 laptop can possibly use the same EFI file, but we suggest to test by yourself.
+
 
 - ### **Acer Swift 5 SF514-54GT**
     |  Specifications   |              Detail               |
@@ -52,9 +47,8 @@
 
 ## BIOS
 
-```diff
-- We accept no liability for any loss or damage howsoever changing BIOS with this guidance and cause damage on your device. Please be careful and Please be careful and make sure you know what you are doing - 
-```
+> We accept no liability for any loss or damage howsoever changing BIOS with this guidance and cause damage on your device. Please be careful and Please be careful and make sure you know what you are doing.
+
 
 - Due to some BIOS options are hidden in **InsydeH2O**, we can use several tools to help us matching [**Intel BIOS Settings | OpenCore Install Guide**](https://dortania.github.io/OpenCore-Install-Guide/config-laptop.plist/icelake.html#intel-bios-settings), here are the steps below.
 
@@ -98,9 +92,8 @@ The details of the guildance please follow [**this**](https://zhuanlan.zhihu.com
 ### **IV. Change BIOS settings.**
 - According to the information in **Step III** to fix the value in BIOS by using **InsydeH2OUVE**.
 
-:::warning 
-- You need to run **WDFInst.exe** first and them open the **InsydeH2OUVE**.
-:::
+> You need to run **WDFInst.exe** first and them open the **InsydeH2OUVE**.
+
 ---
 ---
 # Specific Patch
@@ -144,3 +137,4 @@ The details of the guildance please follow [**this**](https://zhuanlan.zhihu.com
 - [**Dortania**](https://github.com/dortania) for the great guides.
 - [**YOSHIME**]() for fixing bugs in Acer Swift Laptop.
 - [**了了**](https://www.zhihu.com/people/xiao-zu-5-49) for setting up the BIOS.
+
