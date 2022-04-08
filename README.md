@@ -82,7 +82,7 @@ Now with all that, here are the tools we need
 ### **I. Dump BIOS Rom**
 - Run **Universal BIOS Backup ToolKit** as administrator and dump the BIOS rom.
 
-> After you dump your own BIOS, we recommend following the steps down below by using MacOS. It will lost some UEFI information which extracted in Windows.
+> After you dump your own BIOS, we recommend following the steps down below by using MacOS. Some UEFI information will lost in Windows when you extract.
 
 ### **II. Extracting UEFI firmware images**
 - Use **UEFITool_NE** to extract UEFI firmware files, and turn it into txt file by using **Universal IFR Extractor**.
