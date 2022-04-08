@@ -1,8 +1,8 @@
 # Acer Swift 3/5 IceLake Hackintosh (Opencore)
 
-## Tested Model
+## Tested Model Spec
 
-> All Acer Swift 3/5 laptop can possibly use the same EFI file, but we suggest to test by yourself.
+> All Acer Swift 3/5 IceLake laptop can possibly use the same EFI file, but we suggest to test by yourself.
 
 
 - ### **Acer Swift 5 SF514-54GT**
@@ -10,6 +10,7 @@
     |-------------------|-----------------------------------|
     |Processor          |i7-1065G7                          |
     |Integrated Graphics|Intel Iris Plus Graphics           |
+    |Graphic Card       |NVIDIA GeForce MX350 2G            |
     |Memory             |16GB<sup>8Gx2</sup> Sk Hynix LPDDR4X 2667MHz|
     |Sound Card         |Conexant CX20671                   |
     |Wireless Card      |AX201                              |
@@ -20,22 +21,28 @@
     |-------------------|-----------------------------------|
     |Processor          |i5-1035G1                          |
     |Integrated Graphics|Intel UHD Graphics                 |
+    |Graphic Card       |NVIDIA GeForce MX350 2G            |
     |Memory             |8GB Sk Hynix LPDDR4X 2667MHz       |
     |Sound Card         |Conexant CX20671                   |
     |Wireless Card      |AX201                              |
     
 
 ## What is Working?
-- [x] CPU power management
-- [x] Hardware acceleration
-- [x] Sleep/Wake
-- [x] Battery read-out
-- [x] Audio (Internal microphone, 3.5mm headphone jack) <sup>**Internal speaker is not working**</sup>
-- [x] Keyboard & trackpad/touchscreen with all macOS gestures
-- [x] Wi-Fi & Bluetooth
-- [x] USB ports
-- [ ] Airdrop
-- [ ] ThunderBolt 3 <sup>**Not test yet, but the Type-C port are fine.**</sup>
+- CPU power management
+- Hardware acceleration
+- Sleep/Wake
+- Battery read-out
+- Audio (Internal microphone, 3.5mm headphone jack) <sup>**Internal speaker which is not working**</sup>
+- Keyboard & trackpad/touchscreen with all macOS gestures
+- Wi-Fi & Bluetooth
+- USB ports
+- ThunderBolt 3 <sup>**Not test yet, but the Type-C port is fine.**</sup>
+
+## What is Not Working?
+- Airdrop <sup>**Not Supported in MacOS when using Intel Wireless Card**</sup>
+- FingerPrint <sup>**Not Supported in MacOS**</sup>
+- NVIDIA GeForce MX350 <sup>**Disable in ACPI**</sup>
+
 
 ---
 ---
@@ -50,7 +57,7 @@
 > We accept no liability for any loss or damage howsoever changing BIOS with this guidance and cause damage on your device. Please be careful and Please be careful and make sure you know what you are doing.
 
 
-- Due to some BIOS options are hidden in **InsydeH2O**, we can use several tools to help us matching [**Intel BIOS Settings | OpenCore Install Guide**](https://dortania.github.io/OpenCore-Install-Guide/config-laptop.plist/icelake.html#intel-bios-settings), here are the steps below.
+- Due to some BIOS setting options are hidden by **Acer**, we can use several tools to help us matching [**Intel BIOS Settings | OpenCore Install Guide**](https://dortania.github.io/OpenCore-Install-Guide/config-laptop.plist/icelake.html#intel-bios-settings), here are the steps below.
 
 ***
 **Info**
@@ -93,7 +100,7 @@ The details of the guildance please follow [**this**](https://zhuanlan.zhihu.com
 - According to the information in **Step III** to fix the value in BIOS by using **InsydeH2OUVE**.
 
     > You need to run **WDFInst.exe** first and them open the **InsydeH2OUVE**.
-
+    > Change `Low Power S0 Idle Capability` to `Disable` in BIOS or you will get a sleep problem with it.<sup>MacOS only support `S3 Sleep State`</sup>
 ---
 ---
 # Specific Patch
@@ -135,6 +142,6 @@ The details of the guildance please follow [**this**](https://zhuanlan.zhihu.com
 - [**Apple**](https://www.apple.com/tw/) for the macOS.
 - [**Acidanthera**](https://github.com/acidanthera) for awesome kexts and first-class support for hackintosh enthusiasts.
 - [**Dortania**](https://github.com/dortania) for the great guides.
-- [**YOSHIME**]() for fixing bugs in Acer Swift Laptop.
+- [**mfpss95134**](https://github.com/mfpss95134) for fixing bugs in Acer Swift Laptop.
 - [**了了**](https://www.zhihu.com/people/xiao-zu-5-49) for setting up the BIOS.
 
