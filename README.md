@@ -92,7 +92,7 @@ The details of the guildance please follow [**this**](https://zhuanlan.zhihu.com
 ### **IV. Change BIOS settings.**
 - According to the information in **Step III** to fix the value in BIOS by using **InsydeH2OUVE**.
 
-> You need to run **WDFInst.exe** first and them open the **InsydeH2OUVE**.
+    > You need to run **WDFInst.exe** first and them open the **InsydeH2OUVE**.
 
 ---
 ---
