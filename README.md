@@ -36,7 +36,7 @@
 - Hardware acceleration
 - Sleep/Wake
 - Battery read-out
-- Audio (Internal speakers, 3.5mm headphone jack) <sup>**Unstable(No mic, mute button and boot on windows will have some problem.)**</sup>
+- Audio (Internal speakers, 3.5mm headphone jack) <sup>**Unstable(Mic, Mute button, Boot from Windows)**</sup>
 - Keyboard & trackpad/touchscreen with all macOS gestures
 - Wi-Fi & Bluetooth
 - USB ports
